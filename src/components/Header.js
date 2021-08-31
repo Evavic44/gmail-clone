@@ -1,11 +1,30 @@
 import React from "react";
+import "../styles/Header.css";
+import logo from "../assets/images/gmail-logo.png";
+import "font-awesome/css/font-awesome.min.css";
+// import styled from "styled-components";
 
-const header = () => {
+function Header() {
   return (
-    <div>
-      <h1 class="heading">Hello Planet</h1>
-    </div>
+    <header id="container">
+      <div className="container-logo">
+        <a href="https://google.com"></a>
+        <i className="fa fa-facebook"></i>
+        <h1 className="logo">
+          <a href="https://google.com">
+            <img src={logo} alt="Gmail Logo" title="Gmail" />
+          </a>
+        </h1>
+      </div>
+      <div className="search-bar"></div>
+      <div className="header-icons"></div>
+    </header>
   );
-};
+}
+export default Header;
 
-export default header;
+// const Container = styled.div`
+//   background-color: orangered;
+//   color: white;
+//   height: 100px;
+// `
