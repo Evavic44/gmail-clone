@@ -6,6 +6,7 @@
   --bg-primary-color: #fce8e6;
   --hover-color: #f2f2f3;
   --text-color: #202124;
+  --button-color: #5f6368;
 }
 
 /* CSS Reset */
@@ -15,14 +16,47 @@
   box-sizing: border-box;
 }
 
+button,
+input {
+  border: none;
+}
+
+button:focus {
+  background: var(--hover-color);
+}
+
+input {
+  background: var(--hover-color);
+}
+
+input:focus {
+  outline: 1px solid var(--button-color);
+  background: transparent;
+}
+
 body {
   font-family: "Roboto", "RobotoDraft", "Helvetica", "Arial", sans-serif;
   font-size: 0.83rem;
   line-height: 2.077rem;
-  color: #202124;
+  color: var(--text-color);
 }
 
 .heading-one {
   font-weight: 700;
   font-size: 0.8rem;
+}
+
+button {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  color: var(--button-color);
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 100;
+  background-color: transparent;
+}
+
+button:hover {
+  background-color: var(--hover-color);
 }
